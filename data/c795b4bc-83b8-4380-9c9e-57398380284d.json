@@ -1,0 +1,37 @@
+{
+ "deck_id": "c795b4bc-83b8-4380-9c9e-57398380284d",
+ "shuffled": true,
+ "remaining": 6,
+ "cards": [
+  {
+   "value": "3",
+   "suit": "CLUBS",
+   "code": "3C"
+  },
+  {
+   "value": "ACE",
+   "suit": "CLUBS",
+   "code": "AC"
+  },
+  {
+   "value": "4",
+   "suit": "HEARTS",
+   "code": "4H"
+  },
+  {
+   "value": "KING",
+   "suit": "HEARTS",
+   "code": "KH"
+  },
+  {
+   "value": "ACE",
+   "suit": "SPADES",
+   "code": "AS"
+  },
+  {
+   "value": "KING",
+   "suit": "DIAMONDS",
+   "code": "KD"
+  }
+ ]
+}

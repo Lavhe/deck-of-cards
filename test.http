@@ -1,0 +1,54 @@
+
+@baseURL = http://localhost:8000
+
+@deckId = a350fb9b-e850-4c50-8c3d-70f9601795dc
+
+# @name HealthCheck
+GET {{baseURL}}/health HTTP/1.1
+
+###
+
+# @name CreateDeck
+POST {{baseURL}}/deck/create HTTP/1.1
+Content-Type: application/json
+
+###
+
+# @name CreateDeckWithShuffle
+POST {{baseURL}}/deck/create?shuffle=true HTTP/1.1
+Content-Type: application/json
+
+###
+
+# @name CreateDeckWithFilter
+POST {{baseURL}}/deck/create?cards=AS,KD,AC,2C,KH HTTP/1.1
+Content-Type: application/json
+
+###
+
+# @name CreateDeckWithFilterAndShuffle
+POST {{baseURL}}/deck/create?cards=AS,KD,AC,4H,7Q,3C,KH&shuffle=true HTTP/1.1
+Content-Type: application/json
+
+###
+
+# @name OpenAnExising 
+POST {{baseURL}}/deck/open/{{deckId}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+# @name OpenAnInvalidDeck 
+POST {{baseURL}}/deck/open/invalid-deck HTTP/1.1
+Content-Type: application/json
+
+###
+# @name drawOneCard 
+POST {{baseURL}}/deck/draw/{{deckId}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+# @name Draw3Cards 
+POST {{baseURL}}/deck/draw/{{deckId}}?count=15 HTTP/1.1
+Content-Type: application/json
