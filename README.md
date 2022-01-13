@@ -70,8 +70,24 @@ The following additional plugins/frameworks are also used.
    # Starts up the application using the default port (8000), and default data folder (./data)
    go run app.go
 
-    # Alternatively, You can provide your own port and data folder
-    PORT=8080 DATA_DIR=/tmp go run app.go
+   # Alternatively, You can provide your own port and data folder
+   PORT=8080 DATA_DIR=/tmp go run app.go
+   ```
+
+3. Run go tests
+
+   ```sh
+   # To run all tests
+   go test -cover -v deck-of-cards/...
+
+   # To run only deck tests
+   go test -cover -v deck-of-cards/deck_util
+
+   # To run only server tests
+   go test -cover -v deck-of-cards/server
+
+   # To run only db tests
+   go test -cover -v deck-of-cards/db
    ```
 
 ## Usage
